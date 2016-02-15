@@ -6,43 +6,20 @@ import ASUserDefaults
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
-            }
+        describe("these will save and load values into ASUserDefaults") {
             
-            context("these will pass") {
-
+            context("these are saving Ints and String") {
+                
+                ASUserDefaultsManager.sharedManager.save(100, key: "x")
+                
+                ASUserDefaultsManager.sharedManager.save("string",key: "string")
+                
                 it("can do maths") {
-                    expect(23) == 23
+                    expect(ASUserDefaultsManager.sharedManager.load("x") as? Int) == 100
                 }
-
+                
                 it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    dispatch_async(dispatch_get_main_queue()) {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        NSThread.sleepForTimeInterval(0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
+                    expect(ASUserDefaultsManager.sharedManager.load("string") as? String) == "string"
                 }
             }
         }

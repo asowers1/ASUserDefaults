@@ -1,30 +1,24 @@
-#
-# Be sure to run `pod lib lint ASUserDefaults.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "ASUserDefaults"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ASUserDefaults."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+  s.summary          = "ASUserDefaults is an NSUserDefaults wrapper written for Swift 2.0"
   s.description      = <<-DESC
+ASUserDefaults is an NSUserDefaults wrapper written for Swift 2.0.
+You may be asking yourself the following question: "why does NSUserDefaults need a wrapper?" 
+While NSUserDefaults is already a simple to use API, I found myself still occasionally needing to look up the documentation for it.
+What ASUserDefaults aims to do is simplify your NSUserDefaults flow by simply calling a `Save` and `Load` method on the ASUserDefaults shared manager (singleton) class.
+Beyond this simplification, ASUserDefaults offers a delegate that notifys delegators of when an object is being saved/loaded and its key.
+The ASUserDefaults pod project includes an example project and tests.
+Feel free to offer a PR or comment on whether you think this project is useful or not.
+
+Enjoy!
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ASUserDefaults"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/asowers1/ASUserDefaults"
   s.license          = 'MIT'
-  s.author           = { "asowers" => "andrew.sowers@yourkarma.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ASUserDefaults.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "asowers1" => "asow123@gmail.com" }
+  s.source           = { :git => "https://github.com/asowers1/ASUserDefaults.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/andrewsowers'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
@@ -34,7 +28,4 @@ Pod::Spec.new do |s|
     'ASUserDefaults' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
