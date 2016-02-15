@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "ASUserDefaults"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "ASUserDefaults is an NSUserDefaults wrapper written for Swift 2.0"
   s.description      = <<-DESC
 ASUserDefaults is an NSUserDefaults wrapper written for Swift 2.0.
