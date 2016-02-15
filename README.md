@@ -1,6 +1,6 @@
 # ASUserDefaults
 
-[![CI Status](http://img.shields.io/travis/asowers/ASUserDefaults.svg?style=flat)](https://travis-ci.org/asowers/ASUserDefaults)
+[![CI Status](http://img.shields.io/travis/asowers1/ASUserDefaults.svg?style=flat)](https://travis-ci.org/asowers1/ASUserDefaults)
 [![Version](https://img.shields.io/cocoapods/v/ASUserDefaults.svg?style=flat)](http://cocoapods.org/pods/ASUserDefaults)
 [![License](https://img.shields.io/cocoapods/l/ASUserDefaults.svg?style=flat)](http://cocoapods.org/pods/ASUserDefaults)
 [![Platform](https://img.shields.io/cocoapods/p/ASUserDefaults.svg?style=flat)](http://cocoapods.org/pods/ASUserDefaults)
@@ -22,7 +22,7 @@ pod "ASUserDefaults"
 
 ## Author
 
-asowers, andrew.sowers@yourkarma.com
+asowers1, asow123@gmail.com
 
 ## License
 
