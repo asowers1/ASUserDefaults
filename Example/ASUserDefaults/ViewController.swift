@@ -15,19 +15,26 @@ class ViewController: UIViewController, ASUserDefaultsManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         userDefaultsManager.delegate = self
         
-        userDefaultsManager.save(100, key: "aValue")
+        userDefaultsManager.save(100, key: "key")
         
-        print("value is: \(userDefaultsManager.load("aValue"))")
+        print("value is: \(userDefaultsManager.load("key"))")
         
-        userDefaultsManager.save(1000, key: "aValue")
+        userDefaultsManager.setSuiteName("suite_1") // switching to alternative suite
         
-        print("value is: \(userDefaultsManager.load("aValue"))")
+        userDefaultsManager.save(1000, key: "key")
         
-        userDefaultsManager.save(100.50, key: "aValue")
+        print("value is: \(userDefaultsManager.load("key"))")
+
+        userDefaultsManager.setSuiteName(nil) // switching back to default suite
         
-        print("final value is: \(userDefaultsManager.load("aValue"))")
+        userDefaultsManager.save(100.50, key: "key") // this should not effect the value in suite_1
+        
+        userDefaultsManager.setSuiteName("suite_1") // witching back to suite_1
+        
+        print("final value is: \(userDefaultsManager.load("key"))") // this should print 1000
     
     }
 
@@ -36,12 +43,12 @@ class ViewController: UIViewController, ASUserDefaultsManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func didSaveObject(object: AnyObject?, withName: String) {
-        print("did save: \(object) named: \(withName)")
+    func didSaveObject(object: AnyObject?, withName: String, inSuite: String) {
+        print("did save: \(object) named: \(withName) in suite: \(inSuite)")
     }
     
-    func didLoadObject(object: AnyObject?, withName: String) {
-        print("did load: \(object) named: \(withName)")
+    func didLoadObject(object: AnyObject?, withName: String, inSuite: String) {
+        print("did save: \(object) named: \(withName) in suite: \(inSuite)")
     }
 
 }
