@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol ASUserDefaultsManagerDelegate {
+public protocol ASUserDefaultsManagerDelegate: class {
     func didSaveObject(object: AnyObject?, withName: String, inSuite: String)
     func didLoadObject(object: AnyObject?, withName: String, inSuite: String)
 }
@@ -20,7 +20,7 @@ public class ASUserDefaultsManager : NSObject {
     
     static public let sharedManager = ASUserDefaultsManager()
 
-    public var delegate: ASUserDefaultsManagerDelegate?
+    public weak var delegate: ASUserDefaultsManagerDelegate?
     
     // save will do its best to infer the type you'd like to save. Just remember, you should probably know the type you'd like to save/load
     public func save(value: AnyObject?, key: String) {

@@ -1,11 +1,11 @@
 PODS:
-  - ASUserDefaults (0.1.0)
-  - Nimble (3.0.0)
+  - ASUserDefaults (0.2.1)
+  - Nimble (4.0.1)
   - Quick (0.8.0)
 
 DEPENDENCIES:
   - ASUserDefaults (from `../`)
-  - Nimble (= 3.0.0)
+  - Nimble
   - Quick (~> 0.8.0)
 
 EXTERNAL SOURCES:
@@ -13,8 +13,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ASUserDefaults: 1b1588be25fd30323eb8b780cd3038a5096f06d4
-  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  ASUserDefaults: 7426b374c3e1ed5f2fc273e092ed9c5dccc0be72
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
 
 COCOAPODS: 0.39.0
